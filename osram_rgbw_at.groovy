@@ -358,7 +358,8 @@ def off() {
 
 def setColorTemperature(value) {
     def cmds = []
-    cmds << sendEvent(name: "colorMode", value: "W", displayed: false)    
+    cmds << sendEvent(name: "colorMode", value: "W", displayed: false)
+    cmds << sendEvent(name: "color", value: "#FFFFFF", displayed: false)
     cmds << zigbee.setColorTemperature(value)
     cmds
 }
