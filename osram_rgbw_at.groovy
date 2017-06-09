@@ -372,6 +372,8 @@ def setColor(value) {
     if (!state.colorTransition) state.colorTransition = DEFAULT_COLOR_TRANSITION
     def cmds = []
     log.debug "setColor acting on  ${value}"
+    value.hex = colorUtil.hslToHex(value.hue, value.saturation)
+    log.debug "color will be set to ${value.hex}"
     if (device.currentValue("switch") == "off") {
         cmds << zigbee.on()
         cmds << "delay 500"
