@@ -105,10 +105,10 @@ metadata {
         multiAttributeTile(name:"switch", type: "lighting", width: 6, height: 4, canChangeIcon: true) {
         
             tileAttribute ("device.switch", key: "PRIMARY_CONTROL") {
-                attributeState "on", label:'${name}', action:"off", icon:"st.lights.philips.hue-single", backgroundColor:"#79b821", nextState:"turningOff"
+                attributeState "on", label:'${name}', action:"off", icon:"st.lights.philips.hue-single", backgroundColor:"#00a0dc", nextState:"turningOff"
                 attributeState "off", label:'${name}', action:"on", icon:"st.lights.philips.hue-single", backgroundColor:"#ffffff", nextState:"turningOn"
-                attributeState "turningOn", label:'Turning...', action:"on", icon:"st.lights.philips.hue-single", backgroundColor:"#ffffff", nextState:"turningOn"
-                attributeState "turningOff", label:'Turning...', action:"off", icon:"st.lights.philips.hue-single", backgroundColor:"#79b821", nextState:"turningOff"
+                attributeState "turningOn", label:'Turning...', action:"on", icon:"st.lights.philips.hue-single", backgroundColor:"#00a0dc", nextState:"turningOn"
+                attributeState "turningOff", label:'Turning...', action:"off", icon:"st.lights.philips.hue-single", backgroundColor:"#ffffff", nextState:"turningOff"
             }           
             tileAttribute ("device.level", key: "SLIDER_CONTROL") {
                 attributeState "level", action:"setLevel"
